@@ -1,6 +1,9 @@
 """
 Input: test = "()[]{}"
 Output: true
+------------
+Input: test = "()[]]{}"
+Output: false
 """
 
 def explodeList(stack: list):
@@ -59,10 +62,6 @@ def checkIsValid(stack_to_explore: list):
 
 test = "([{[]}]){[{}]}{}"
 
-stack = list(test)
-
-stack_to_explore = stack.copy()
-
-is_valid = True
+stack_to_explore = list(test)
 
 print(checkIsValid(stack_to_explore))
